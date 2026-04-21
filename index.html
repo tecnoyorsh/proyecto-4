@@ -1,123 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proyecto IV</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1 class="titulo">Bienvenidos a Mi Página</h1>
+    <h1 class="titulo-animado">Bienvenidos</h1>
     
-</header>
 
-<!-- 🔥 SLIDER -->
-<section>
-    <h2>Galería</h2>
-    <div class="slider">
-        <div class="slides">
-            <img src="https://picsum.photos/600/300?1">
-            <img src="https://picsum.photos/600/300?2">
-            <img src="https://picsum.photos/600/300?3">
+    <!-- 🔥 SLIDER -->
+    <section>
+        <h2>Galería</h2>
+        <div class="slider">
+            <div class="slides">
+                <img src="https://picsum.photos/600/300?1">
+                <img src="https://picsum.photos/600/300?2">
+                <img src="https://picsum.photos/600/300?3">
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 🛒 TIENDITA -->
-<section>
-    <h2>Tienda Virtual</h2>
+    <!-- 🎬 ANIMACIONES EMBEBIDAS -->
+    <section>
+        <h2>Animaciones Embebidas</h2>
 
-    <div class="productos">
+        <div class="animaciones">
+            <div class="caja mover">Mover</div>
+            <div class="caja girar">Girar</div>
+            <div class="caja rebote">Rebote</div>
+        </div>
+    </section>
 
-        <div class="card">
+    <!-- ❓ FAQ -->
+    <section>
+        <h2>Preguntas Frecuentes</h2>
+
+        <details>
+            <summary>¿Qué servicios ofrece este sitio?</summary>
+            <p>Este sitio ofrece información sobre tecnología y programación.</p>
+        </details>
+
+        <details>
+            <summary>¿Cómo puedo contactar con el administrador?</summary>
+            <p>Puedes usar el chat en vivo disponible en la página.</p>
+        </details>
+
+        <details>
+            <summary>¿La información del sitio es gratuita?</summary>
+            <p>Sí, todo el contenido disponible es completamente gratuito.</p>
+        </details>
+    </section>
+
+    <!-- 🎥 VIDEOS -->
+    <section>
+        <h2>Videos</h2>
+
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/GCFnRkorl5g"
+        frameborder="0" allowfullscreen></iframe>
+
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/3fumBcKC6RE"
+        frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- 🖼 GALERÍA -->
+    <section>
+        <h2>Galería de Imágenes</h2>
+
+        <div class="galeria">
+            <img src="https://picsum.photos/200?1">
+            <img src="https://picsum.photos/200?2">
+            <img src="https://picsum.photos/200?3">
             <img src="https://picsum.photos/200?4">
-            <h3>Audífonos Gamer</h3>
-            <p>$350 MXN</p>
-            <button onclick="comprar('Audífonos Gamer')">Comprar</button>
+        </div>
+    </section>
+
+    <!-- 🛒 TIENDITA -->
+    <section>
+        <h2>Tiendita Virtual</h2>
+
+        <div class="productos">
+
+            <div class="producto">
+                <img src="https://picsum.photos/200?10">
+                <h3>Mouse Gamer</h3>
+                <p>$250 MXN</p>
+                <button onclick="comprar('Mouse Gamer')">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://picsum.photos/200?11">
+                <h3>Teclado RGB</h3>
+                <p>$550 MXN</p>
+                <button onclick="comprar('Teclado RGB')">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://picsum.photos/200?12">
+                <h3>Audífonos Pro</h3>
+                <p>$399 MXN</p>
+                <button onclick="comprar('Audífonos Pro')">Comprar</button>
+            </div>
+
         </div>
 
-        <div class="card">
-            <img src="https://picsum.photos/200?5">
-            <h3>Mouse RGB</h3>
-            <p>$250 MXN</p>
-            <button onclick="comprar('Mouse RGB')">Comprar</button>
+        <h3 id="carrito">Carrito: Vacío 🛒</h3>
+    </section>
+
+    <!-- 🌐 REDES -->
+    <section>
+        <h2>Redes Sociales</h2>
+
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+    </section>
+
+    <!-- ⭐ VALORACIÓN -->
+    <section>
+        <h2>Califica esta página</h2>
+
+        <div class="stars">
+            <span class="star" onclick="rate(1)">★</span>
+            <span class="star" onclick="rate(2)">★</span>
+            <span class="star" onclick="rate(3)">★</span>
+            <span class="star" onclick="rate(4)">★</span>
+            <span class="star" onclick="rate(5)">★</span>
         </div>
 
-        <div class="card">
-            <img src="https://picsum.photos/200?6">
-            <h3>Teclado Mecánico</h3>
-            <p>$650 MXN</p>
-            <button onclick="comprar('Teclado Mecánico')">Comprar</button>
-        </div>
+        <p id="mensaje"></p>
+    </section>
 
-    </div>
+    <!-- SCRIPT -->
+    <script>
+        function rate(num) {
+            let stars = document.querySelectorAll('.star');
 
-    <h3 id="carrito">Carrito: Vacío</h3>
-</section>
+            stars.forEach((star, index) => {
+                if(index < num){
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
 
-<!-- ❓ FAQ -->
-<section>
-<h2>Preguntas Frecuentes</h2>
-
-<details>
-<summary>¿Qué servicios ofrece este sitio?</summary>
-<p>Información sobre tecnología y programación.</p>
-</details>
-
-<details>
-<summary>¿Cómo contacto al administrador?</summary>
-<p>Usando el chat en vivo.</p>
-</details>
-
-</section>
-
-<!-- ⭐ VALORACIÓN -->
-<section>
-<h2>Califica esta página</h2>
-
-<div class="stars">
-<span class="star" onclick="rate(1)">★</span>
-<span class="star" onclick="rate(2)">★</span>
-<span class="star" onclick="rate(3)">★</span>
-<span class="star" onclick="rate(4)">★</span>
-<span class="star" onclick="rate(5)">★</span>
-</div>
-
-<p id="mensaje"></p>
-</section>
-
-<!-- REDES -->
-<section>
-<h2>Redes Sociales</h2>
-<a href="#">Facebook</a>
-<a href="#">Instagram</a>
-<a href="#">YouTube</a>
-</section>
-
-<script>
-function rate(num){
-    let stars = document.querySelectorAll('.star');
-
-    stars.forEach((star,index)=>{
-        if(index < num){
-            star.classList.add('active');
-        }else{
-            star.classList.remove('active');
+            document.getElementById("mensaje").innerText =
+            "Calificaste con " + num + " estrellas ⭐";
         }
-    });
 
-    document.getElementById("mensaje").innerText =
-    "Calificaste con " + num + " estrellas ⭐";
-}
+        function comprar(producto){
+            document.getElementById("carrito").innerText =
+            "Carrito: " + producto + " agregado 🛒";
+        }
+    </script>
 
-function comprar(producto){
-    document.getElementById("carrito").innerText =
-    "Carrito: " + producto + " agregado 🛒";
-}
-</script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),
+        s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/69ada6899a14b11c387f8d9b/1jj7552gb';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 
 </body>
 </html>
