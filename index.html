@@ -24,7 +24,7 @@
         </div>
     </section>
 
-    <!-- 🎬 ANIMACIONES EMBEBIDAS -->
+    <!--ANIMACIONES EMBEBIDAS -->
     <section>
         <h2>Animaciones Embebidas</h2>
 
@@ -112,6 +112,39 @@
         <h3 id="carrito">Carrito: Vacío 🛒</h3>
     </section>
 
+    <section>
+    <h2>Ubicación</h2>
+
+    <p>Aquí puedes encontrar nuestra ubicación:</p>
+
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.508!2d-103.3496!3d20.6597"
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</section>
+
+<section>
+    <h2>Contáctame</h2>
+
+    <form onsubmit="enviarFormulario(event)">
+        
+        <input type="text" placeholder="Nombre" required><br><br>
+        
+        <input type="email" placeholder="Correo electrónico" required><br><br>
+        
+        <textarea placeholder="Escribe tu mensaje..." required></textarea><br><br>
+        
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <p id="respuesta"></p>
+</section>
+
     <!-- 🌐 REDES -->
     <section>
         <h2>Redes Sociales</h2>
@@ -158,6 +191,13 @@
             document.getElementById("carrito").innerText =
             "Carrito: " + producto + " agregado 🛒";
         }
+
+        function enviarFormulario(event){
+    event.preventDefault();
+
+    document.getElementById("respuesta").innerText =
+    "Mensaje enviado correctamente ✅";
+}
     </script>
 
     <!--Start of Tawk.to Script-->
